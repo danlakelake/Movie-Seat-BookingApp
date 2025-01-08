@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -13,6 +13,7 @@ body{
     justify-content: center;
     height: 100vh;
     font-family: 'lato', sans-serif;
+    margin:0;
 }
 
 .movie-container{
@@ -29,6 +30,11 @@ body{
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
+}
+
+.container{
+    perspective: 1000px;
+    margin-bottom: 30px;
 }
 
 .seat {
@@ -76,7 +82,7 @@ body{
     justify-content: space-between;
 }
 
-.shoucase li{
+.showcase li{
     display:flex;
     align-items:center;
     justify-content: center;
@@ -89,4 +95,21 @@ body{
 
 .row {
     display: flex;
+}
+
+.screen {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text { 
+    margin: 5px 0;
+}
+
+p.text span {
+    color: #6feaf6;
 }
