@@ -3,9 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Seat BookingApp</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Reservaciones</title>
 </head>
 <body>
-    
+    <!-- Contenedor Select Películas -->
+    <div class="movie-container">
+        <label>Selecciona una película:</label>
+        <select id="movies">
+            <option value="10">Avengers: Endgame ($100)</option>
+            <option value="12">El Guasón ($120)</option>
+            <option value="8">Toy Story 4 ($80)</option>
+            <option value="9">El Rey León ($90)</option>
+        </select>
+    </div>
+
+    <!-- Lista de Disponibilidad -->
+    <ul class="showcase">
+        <li>
+            <div class="seat">
+                <small>N/A</small>
+            </div>
+        </li>
+        <li>
+            <div class="seat selected">
+                <small>Seleccionado</small>
+            </div>
+        </li>
+        <li>
+            <div class="seat occupied">
+                <small>Ocupado</small>
+            </div>
+        </li>
+    </ul>
+
+     <!-- Contenedor Asientos -->
+    <div class="container">
+        <div class="screen"></div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+        </div>
+        <div class="row">
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat occupied"></div>
+            <div class="seat"></div>
+        </div>
+    </div>
+
+    <!-- Texto Informativo -->
+    <p class="text">Tu has seleccionado <span id="count">0</span> asientos por el precio de $<span id="total">0</span></p>
+
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
