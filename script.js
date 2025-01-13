@@ -43,14 +43,26 @@ function updateSelectedCount(){
 function getDataFromLS(){
     // Trae los valores en formato Json(objeto)
     const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+    // Verifica que los valores que traiga sean diferentes de null y mayores a 0
     if (selectedSeats !== null && selectedSeats.length > 0) {
+        // Itera sobre el arreglo
         seats.forEach((seat, index) => {
-            if (selectedSeats.indexOf(index)) {
-                
+            // Verifica que el valor del índice sea mayor a -1 = (no-existe), del metodo IndexOf
+            if (selectedSeats.indexOf(index) > -1) {
+                // Si la condición se cumple(mayor a -1), agrega la clase "selected" a los asientos previamente seleccioandos en el DOM
+                seat.classList.add('selected');
             }
         });
     }
-    console.log(selectedSeats);
+
+    const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+    const selectedMoviePrice = localStorage.getItem('selectedMoviePrice');
+
+    // Verfica que selectedMovieIndex contenga valor desde LocalStorage
+    if (selectedMovieIndex !== null) {
+        // Si la condicion se cumple, agrega el valor al selectedIndex
+        movieSelect.selectedIndex = selectedMovieIndex;
+    }
     
 }
 
@@ -69,4 +81,6 @@ container.addEventListener('click', function(e){
     }
 });
 
+// Inicializa el contador de asientos y el total
+updateSelectedCount();
 
