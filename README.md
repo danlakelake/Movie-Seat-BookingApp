@@ -3,5 +3,5 @@
 
 **Es:** _En este proyecto se practicó el uso de local storage y el método spread operator._
 
-**Puedes ver la versión desplegada de la app aquí:**
-https://nimble-kashata-f2592e.netlify.app/ 
+**Puedes ver la versión desplegada de la app aquí:**\
+https://nimble-kashata-f2592e.netlify.app/
